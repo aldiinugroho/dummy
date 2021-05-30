@@ -12,5 +12,5 @@ app.get('/v1/api/bali/weather', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`app listening at http://localhost:${port}`)
+  console.log(`app listening at port: ${port}`)
 })
