@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3030
+const port = process.env.PORT || 3030
 
 const jsondata = require('./model_bangli.json')
 
@@ -16,7 +16,7 @@ app.post('/v1/data', (req, res) => {
     console.log(req.body.name)
     res.send(req.body.name)
   } catch (error) {
-    res.json("faile")
+    res.json("failed")
   }
 })
 
