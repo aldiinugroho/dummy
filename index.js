@@ -13,10 +13,11 @@ app.get('/v1/api/bali/weather', (req, res) => {
 
 app.post('/v1/data', (req, res) => {
   try {
-    console.log(req.body)
-    res.send(req.body)
+    console.log({message: "success ", payload: req.body, date: new Date()})
+    res.json({message: "success ", payload: req.body, date: new Date()})
   } catch (error) {
-    res.json("failed")
+    console.log({message: "failed ", payload: req.body, date: new Date()})
+    res.json({message: "failed ", date: new Date()})
   }
 })
 
