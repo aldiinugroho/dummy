@@ -13,8 +13,8 @@ app.get('/v1/api/bali/weather', (req, res) => {
 
 app.post('/v1/data', (req, res) => {
   try {
-    console.log(req.body.name)
-    res.send(req.body.name)
+    console.log(req.body)
+    res.send(req.body)
   } catch (error) {
     res.json("failed")
   }
